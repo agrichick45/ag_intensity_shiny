@@ -90,11 +90,11 @@ countyData<-readShapeSpatial("countyshape.shp")
 plotDataset<-mergedData
 
 #set up the interactive variables for numeric values
-varsX<-names(plotDataset[7:48])
+varsX<-as.list(names(plotDataset[7:48]))
 #set up the categorical variables
-varsY<-names(plotDataset[4:6])
+varsY<-as.list(names(plotDataset[4:6]))
 #set up the fill vizualization categorical options.
-varsZ<-c(names(plotDataset[5:6]), "NULL")
+varsZ<-as.list(c(names(plotDataset[5:6]), "NULL"))
 
 ###############################################################################
 #
