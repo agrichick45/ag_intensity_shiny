@@ -6,6 +6,36 @@
 # Email:  amliesch@ncsu.edu
 #
 ###############################################################################
+library(leaps)
+library(dplyr)
+library(shiny)
+library(shinyWidgets)
+library(shinythemes)
+library(mapdeck)
+library(markdown)
+library(ggplot2)
+library(rjson)
+library(jsonlite)
+library(leaflet)
+library(RCurl)
+library(rgeos)
+library(maptools)
+library(leaflet)
+library(htmltools)
+library(shiny)
+library(plotly)
+library(shiny)
+library(tidyverse)
+library(caret)
+library(rsample)
+library(rpart)	
+library(rpart.plot)
+library(png)
+library(summarytools)
+library(rattle)
+library(gbm)
+library(stringr)
+library(ggridges)
 
 ###############################################################################
 #
