@@ -88,7 +88,7 @@ countyData<-readShapeSpatial("countyshape.shp")
 
 #Change the dataset for ggplot
 plotDataset<-mergedData
-data(plotDataset)
+
 #set up the interactive variables for numeric values
 varsX<-names(plotDataset[7:48])
 #set up the categorical variables
