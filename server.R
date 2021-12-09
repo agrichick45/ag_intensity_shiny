@@ -72,7 +72,7 @@ mergedData$InitialCluster<-as.factor(mergedData$InitialCluster)
 mergedData$Megacluster<-as.factor(mergedData$Megacluster)
 
 # Read in the second data file
-agIntSlope <- read_csv(dataPath2, col_types=cols())
+agIntenSlope <- read_csv(dataPath2, col_types=cols())
 
 # Remove all NAs with Zeros
 agIntenSlope[is.na(agIntenSlope)]<-0
