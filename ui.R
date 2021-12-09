@@ -37,6 +37,13 @@ library(gbm)
 library(stringr)
 library(ggridges)
 
+
+#set up the interactive variables for numeric values
+varsX<-as.list(names(plotDataset[7:48]))
+#set up the categorical variables
+varsY<-as.list(names(plotDataset[4:6]))
+#set up the fill vizualization categorical options.
+varsZ<-as.list(c(names(plotDataset[5:6]), "NULL"))
 ###############################################################################
 #
 # Start of Shiny UI
