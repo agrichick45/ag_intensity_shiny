@@ -70,6 +70,17 @@ varsX<-as.list(names(plotDataset[7:48]))
 varsY<-as.list(names(plotDataset[4:6]))
 #set up the fill vizualization categorical options.
 varsZ<-as.list(c(names(plotDataset[5:6]), "NULL"))
+
+#Remove the Cropland Loss Parameter
+mergedData$PerCroplandLoss<-NULL
+
+#Create an index partition for an 80% test, 20% train
+index <- createDataPartition(mergedData$PerCroplandGain,
+                             p = 0.8, list = FALSE, times = 1)
+
+#Output the training and test datasets
+train.tree <- mergedData[ index,]
+test.tree  <- mergedData[-index,]
 ###############################################################################
 #
 # Start of Shiny UI
