@@ -37,6 +37,8 @@ library(gbm)
 library(stringr)
 library(ggridges)
 
+#Change the dataset for ggplot
+plotDataset<-mergedData
 
 #set up the interactive variables for numeric values
 varsX<-as.list(names(plotDataset[7:48]))
