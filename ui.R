@@ -37,6 +37,30 @@ library(gbm)
 library(stringr)
 library(ggridges)
 
+# Set the file name.
+dataPath1 <- "./Data/mergedData.csv"
+dataPath2 <- "./Data/agIntenSlope.csv"
+
+## Read in the full Dataset.
+mergedData <- read_csv(dataPath1, col_types=cols())
+
+## Remove all NA from the full dataset with zero
+mergedData[is.na(mergedData)]<-0
+
+#Convert factors to Factors
+mergedData$NCHS_URCS_2013<-as.factor(mergedData$NCHS_URCS_2013)
+mergedData$InitialCluster<-as.factor(mergedData$InitialCluster)
+mergedData$Megacluster<-as.factor(mergedData$Megacluster)
+
+# Read in the second data file
+agIntenSlope <- read_csv(dataPath2, col_types=cols())
+
+# Remove all NAs with Zeros
+agIntenSlope[is.na(agIntenSlope)]<-0
+
+#Load in the GIS Shapefile for dynamic models
+countyData<-readShapeSpatial("countyshape.shp")
+
 #Change the dataset for ggplot
 plotDataset<-mergedData
 
